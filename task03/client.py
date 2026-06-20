@@ -36,7 +36,7 @@ if ROLE == "SUBSCRIBER":
 
 while True:
 
-    msg = input()
+    msg = input("Enter message: ")
 
     if msg.lower() == "terminate":
         client.close()

@@ -1,0 +1,22 @@
+python server.py 5000
+
+python server.py 5001
+
+python server.py 5002
+
+python client.py PUBLISHER SPORTS
+
+python client.py SUBSCRIBER SPORTS
+
+python client.py SUBSCRIBER SPORTS
+
+python client.py SUBSCRIBER NEWS
+
+* Send a message from publisher ....
+
+* Kill the server running on port 5000
+
+* The publisher and the subscribers will connect to a new server on port 5001 
+
+* Check the requests send same as previous
+
