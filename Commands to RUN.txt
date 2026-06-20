@@ -1,0 +1,37 @@
+Task 01 : Single server + Genral subscriber 
+python server.py 5000
+python client.py 127.0.0.1 5000 PUBLISHER GENERAL
+
+Connection message will recieve in server side
+Enter a message as publisher : 
+
+            |
+            |
+            |
+            |
+
+
+Task 02 :  Multiple Subcribers for one General publisher
+python client.py 127.0.0.1 5000 SUBSCRIBER GENERAL
+python client.py 127.0.0.1 5000 SUBSCRIBER GENERAL
+
+The messages recive to all general subscribers and server
+Enter a message as a publisher : 
+
+            |
+            |
+            |
+            |
+
+Task 03 : Topic wise isolated Publishers and Subscribers
+python client.py 127.0.0.1 5000 PUBLISHER SPORTS
+python client.py 127.0.0.1 5000 SUBSCRIBER SPORTS
+python client.py 127.0.0.1 5000 SUBSCRIBER SPORTS
+
+python client.py 127.0.0.1 5000 PUBLISHER BLOG
+python client.py 127.0.0.1 5000 SUBSCRIBER BLOG
+
+The messages recive to all general subscribers and server
+Enter a message as a special publisher(sports) : 
+
+Only the sports subscribers recieve message. BLOG subcribers won't recieve the message.
